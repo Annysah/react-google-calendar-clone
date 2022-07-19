@@ -11,9 +11,9 @@ const Day = ({ day, rowIndex }) => {
   return (
     <div className="border border-gray-200 flex flex-col">
       <header className="flex flex-col items-center">
-        {rowIndex === 0 && <p className="text-sm mt-1">{day.format("ddd")}</p>}
-        <p className={`text-sm p-1 my-1 text-center  ${getCurrentDayClass()}`}>
-          {day.format("DD")}
+        {rowIndex === 0 && <p className="text-xs font-semibold text-gray-500 mt-1">{day.format("ddd").toUpperCase()}</p>}
+        <p className={`text-xs p-1 my-1 text-center  ${getCurrentDayClass()}`}>
+          {day.format("D")}
         </p>
       </header>
     </div>
