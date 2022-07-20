@@ -6,7 +6,9 @@ const GlobalContext = createContext({
   sidebarCalendarMonth: 0,
   setSidebarCalendarMonth: (index) => {},
   selectDay: null,
-  setSelectDay: (day) => {}
+  setSelectDay: (day) => {},
+  showModal: false,
+  setShowModal: () => {}
 });
 
 export default GlobalContext;

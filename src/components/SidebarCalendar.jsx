@@ -31,9 +31,14 @@ const SidebarCalendar = () => {
   };
 
   const getCurrentSmallCalDay = (day) => {
-    return day.format("DD-MM-YY") === dayjs().format("DD-MM-YY")
-      ? "bg-blue-600 text-white rounded-full w-7"
-      : "";
+    const selectedDay = selectDay && selectDay.format("DD-MM-YY");
+    if (dayjs().format("DD-MM-YY") === day.format("DD-MM-YY")) {
+      return "bg-blue-500 rounded-full text-white";
+    } else if (day.format("DD-MM-YY") === selectedDay) {
+      return "bg-blue-100 rounded-full text-blue-600 font-bold";
+    } else {
+      return "";
+    }
   };
 
   return (
